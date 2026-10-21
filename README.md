@@ -1,5 +1,7 @@
 # Telemetry Lens
 
+[![CI](https://github.com/Harshitha-Chowdary9/telemetry-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/Harshitha-Chowdary9/telemetry-lens/actions/workflows/ci.yml)
+
 A Java 17 observability toolkit: it ingests distributed-tracing spans,
 rebuilds traces and the service dependency graph, computes RED golden-signal
 metrics (Rate, Errors, Duration), finds latency and error-rate anomalies with
@@ -75,8 +77,8 @@ curl localhost:9464/health
   fixed thresholds - no seasonality, no forecasting, no ML-based detection.
 - **No GenAI feature is claimed.** The target role values interest in
   Generative AI; this project deliberately ships none rather than fake one.
-- Built and tested on Temurin JDK 17 with Maven 3.9; no CI pipeline is set
-  up in this repo.
+- Built and tested on Temurin JDK 17 with Maven 3.9. CI runs `mvn test`
+  plus a shaded-jar package on every push and PR via GitHub Actions.
 
 ## Layout
 
